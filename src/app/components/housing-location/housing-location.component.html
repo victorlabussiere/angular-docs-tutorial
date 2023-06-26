@@ -1,0 +1,14 @@
+<!-- house card template -->
+<section class="listing">
+    <img
+        class="listing-photo"
+        [src]="housingLocation.photo"
+        alt="Exterior photo of {{housingLocation.name}}"
+        lazyLoad="true"
+    >
+    <h2 class="listing-heading">
+        <a [routerLink]="['/details', housingLocation.id]"> {{ housingLocation.name }} </a>
+    </h2>
+    <p class="listing-location">{{ housingLocation.city}}, {{housingLocation.state }}</p>
+    <a [routerLink]="['/details', housingLocation.id]">Learn More from {{housingLocation.name.slice(0,6).trim().concat('...')}}</a>
+</section>

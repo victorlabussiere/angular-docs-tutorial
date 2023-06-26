@@ -1,0 +1,76 @@
+.results {
+    display: grid;
+    column-gap: 14px;
+    row-gap: 14px;
+    grid-template-columns: repeat(auto-fill, minmax(400px, 400px));
+    margin-top: 50px;
+    justify-content: space-around;
+}
+
+form {
+    position: fixed;
+    width: 30vw;
+    top: 2vw;
+    right: 2vw;
+    z-index: 9;
+    background-color: white;
+    padding: 1rem;
+
+    border-radius: 1rem;
+    box-shadow: 0 0 16px rgba(0, 0, 0, .2);
+    display: flex;
+    align-items: center;
+
+    justify-content: flex-start;
+    gap: .5rem;
+}
+
+form:hover {
+    transform: scale(1.02);
+    transition: .2s all ease-in-out;
+}
+
+input[type="text"] {
+    border: solid 1px var(--primary-color);
+    padding: 10px;
+    border-radius: 8px;
+    margin-right: 4px;
+    display: inline-block;
+    width: 100%;
+}
+
+.search-input:hover {
+    transform: scale(1.02);
+    transition: .2s all ease-in-out;
+}
+
+button {
+    padding: 10px;
+    border: solid 1px var(--primary-color);
+    background: var(--primary-color);
+    color: white;
+    border-radius: 8px;
+}
+
+button:hover {
+    transform: scale(1.02);
+    transition: .2s ease-in-out all;
+    cursor: pointer;
+    box-shadow: 0 0 8px rgba(0, 0, 0, .2);
+}
+
+@media (min-width: 500px) and (max-width: 768px) {
+    .results {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    input[type="text"] {
+        width: 70%;
+    }
+}
+
+@media (max-width: 499px) {
+    .results {
+        grid-template-columns: 1fr;
+    }
+}
